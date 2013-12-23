@@ -31,7 +31,7 @@ function Update () {
     steer=Input.GetAxis("Horizontal") * maxSteer;
     
     // Apply brakes
-    brake=Input.GetKey("space") ? rigidbody.mass * 0.1: 0.0;
+    brake=Input.GetKey("space") ? rigidbody.mass * 0.4: 0.0;
 
     
     GetCollider(0).steerAngle=steer;
