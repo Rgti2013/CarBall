@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Car\CarController.js">
+    <Files>
+      <File FileName="Assets\Scripts\Car\AntiRollBar.js" Line="5" Column="17" />
+      <File FileName="Assets\Scripts\Car\CarController.js" Line="63" Column="39" />
+      <File FileName="Assets\Scripts\Car\AlignWheels.js" Line="28" Column="77" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
