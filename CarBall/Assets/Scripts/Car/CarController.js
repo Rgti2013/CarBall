@@ -8,6 +8,7 @@
 */  
 
 var wheels : Transform[];
+var centerOfMass : Transform;
 
 var enginePower=150.0;
 
@@ -19,7 +20,8 @@ private var maxSteer= 35.0;
 
 
 function Start(){
-    rigidbody.centerOfMass=Vector3(0,-0.5,0.3);
+   //rigidbody.centerOfMass-=Vector3(0,-0.3, 0);
+   rigidbody.centerOfMass = centerOfMass.localPosition;
 }
 
 function Update () {
@@ -59,6 +61,8 @@ function Update () {
     
     // Handbrakes
     if(Input.GetKey(KeyCode.Space)) {
+    	GetCollider(0).brakeTorque=1000f;
+    	GetCollider(1).brakeTorque=1000f;
     	GetCollider(2).brakeTorque=1000f;
     	GetCollider(3).brakeTorque=1000f;
     }
