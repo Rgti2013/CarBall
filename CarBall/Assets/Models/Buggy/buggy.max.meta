@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: f36afc28c1c660e45a32d7d879aa1c76
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Rig_Buggy.Axel_FL
+    100004: Rig_Buggy.Axel_FR
+    100006: Rig_Buggy.Axel_RL
+    100008: Rig_Buggy.Axel_RR
+    100010: Rig_Buggy.Frame
+    100012: Rig_Buggy.Gun
+    100014: Rig_Buggy.Gun_Base
+    100016: Rig_Buggy.gun_cylinders
+    100018: Rig_Buggy.Gun_Parent
+    100020: Rig_Buggy.latch
+    100022: Rig_Buggy.lid
+    100024: Rig_Buggy.Shock_FL_Piston
+    100026: Rig_Buggy.Shock_FL_Sleeve
+    100028: Rig_Buggy.Shock_FR_Piston
+    100030: Rig_Buggy.Shock_FR_Sleeve
+    100032: Rig_Buggy.Shock_RL_Piston
+    100034: Rig_Buggy.Shock_RL_Sleeve
+    100036: Rig_Buggy.Shock_RR_Piston
+    100038: Rig_Buggy.Shock_RR_Sleeve
+    100040: Rig_Buggy.Speedo
+    100042: Rig_Buggy.Steer_Arm
+    100044: Rig_Buggy.Steer_Wheel
+    100046: Rig_Buggy.view
+    100048: Rig_Buggy.Wheel_FL_Rotate
+    100050: Rig_Buggy.Wheel_FL_Turn
+    100052: Rig_Buggy.Wheel_FL_Turn_parent
+    100054: Rig_Buggy.Wheel_FR_Rotate
+    100056: Rig_Buggy.Wheel_FR_Turn
+    100058: Rig_Buggy.Wheel_FR_Turn_parent
+    100060: Rig_Buggy.Wheel_RL
+    100062: Rig_Buggy.Wheel_RR
+    100064: smdimport
+    400000: //RootNode
+    400002: Rig_Buggy.Axel_FL
+    400004: Rig_Buggy.Axel_FR
+    400006: Rig_Buggy.Axel_RL
+    400008: Rig_Buggy.Axel_RR
+    400010: Rig_Buggy.Frame
+    400012: Rig_Buggy.Gun
+    400014: Rig_Buggy.Gun_Base
+    400016: Rig_Buggy.gun_cylinders
+    400018: Rig_Buggy.Gun_Parent
+    400020: Rig_Buggy.latch
+    400022: Rig_Buggy.lid
+    400024: Rig_Buggy.Shock_FL_Piston
+    400026: Rig_Buggy.Shock_FL_Sleeve
+    400028: Rig_Buggy.Shock_FR_Piston
+    400030: Rig_Buggy.Shock_FR_Sleeve
+    400032: Rig_Buggy.Shock_RL_Piston
+    400034: Rig_Buggy.Shock_RL_Sleeve
+    400036: Rig_Buggy.Shock_RR_Piston
+    400038: Rig_Buggy.Shock_RR_Sleeve
+    400040: Rig_Buggy.Speedo
+    400042: Rig_Buggy.Steer_Arm
+    400044: Rig_Buggy.Steer_Wheel
+    400046: Rig_Buggy.view
+    400048: Rig_Buggy.Wheel_FL_Rotate
+    400050: Rig_Buggy.Wheel_FL_Turn
+    400052: Rig_Buggy.Wheel_FL_Turn_parent
+    400054: Rig_Buggy.Wheel_FR_Rotate
+    400056: Rig_Buggy.Wheel_FR_Turn
+    400058: Rig_Buggy.Wheel_FR_Turn_parent
+    400060: Rig_Buggy.Wheel_RL
+    400062: Rig_Buggy.Wheel_RR
+    400064: smdimport
+    4300000: smdimport
+    9500000: //RootNode
+    13700000: smdimport
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0109999999
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 
