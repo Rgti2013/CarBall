@@ -9,7 +9,7 @@ function FixedUpdate() {
 
 	// Set AntiRoll (stifness) according to the speed of the car
 	//AntiRoll = carBody.velocity.magnitude * 800;
-	Debug.Log(carBody.velocity.magnitude);
+	//Debug.Log(carBody.velocity.magnitude);
 
     var hit: WheelHit;
     var travelL = 1.0;
