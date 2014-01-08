@@ -1,19 +1,36 @@
 ﻿#pragma strict
 
-var player1Score : int = 0;
-var player2Score : int = 0;
+public var player1Score : int = 0;
+public var player2Score : int = 0;
 public var resetTime : float = 3;
+
+public var player1CarObject : GameObject;
+public var player2CarObject : GameObject;
+public var ballObject : GameObject;
+
+private var player1CarInitPos : Vector3;
+private var player1CarInitRot : Quaternion;
+private var player2CarInitPos : Vector3;
+private var player2CarInitRot : Quaternion;
+private var ballInitPos : Vector3;
+private var ballInitRot : Quaternion;
 
 private var timer : float = resetTime;
 private var timerRunning : boolean = false;
 
 function Start () {
-
+	player1CarInitPos = player1CarObject.transform.position;
+	player1CarInitRot = player1CarObject.transform.rotation;
+	player2CarInitPos = player2CarObject.transform.position;
+	player2CarInitRot = player2CarObject.transform.rotation;
+	ballInitPos = ballObject.transform.position;
+	ballInitRot = ballObject.transform.rotation;
 }
 
 function Update () {
 	// Update HUD
 	// TODO: Add HUD and update it
+	
 	
 	// Control the timer
 	if(timerRunning) {
@@ -50,6 +67,27 @@ function addToScore(pId : int, points : int) {
 }
 
 function repositionScene() {
-	// TODO: Reposition the ball and the cars
+	Debug.Log("Repositioning scene!");
 	
+	// Reposition players
+	player1Reposition();
+	player2Reposition();
+	
+	// Reposition the ball
+	ballObject.transform.position = ballInitPos;
+	ballObject.transform.rotation = ballInitRot;
+	ballObject.rigidbody.velocity = new Vector3(0,0,0);
+	
+}
+
+function player1Reposition () {
+	player1CarObject.transform.position = player1CarInitPos;
+	player1CarObject.transform.rotation = player1CarInitRot;
+	player1CarObject.rigidbody.velocity = new Vector3(0,0,0);
+}
+
+function player2Reposition () {
+	player2CarObject.transform.position = player2CarInitPos;
+	player2CarObject.transform.rotation = player2CarInitRot;
+	player2CarObject.rigidbody.velocity = new Vector3(0,0,0);
 }
