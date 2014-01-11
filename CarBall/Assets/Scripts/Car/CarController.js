@@ -1,12 +1,5 @@
 ﻿//CarController1.js
 
-/*
- TODO: 
-	 - Lower the tire friction at high speed to prevent the car flipping
-	 - Control the visual representation of the wheels
-	 - Adjust the friction on the wheels manually to prevent flipping
-*/  
-
 var wheels : Transform[];
 var centerOfMass : Transform;
 
