@@ -4,6 +4,14 @@ public var player1Score : int = 0;
 public var player2Score : int = 0;
 public var resetTime : float = 3;
 
+public var playerWonText : GUIText;
+public var pressToRestartWonText : GUIText;
+public var sideCamera : Camera;
+public var topCamera : Camera;
+
+public var winScore : int = 10;
+private var playEnded : boolean = false;
+
 public var player1CarObject : GameObject;
 public var player2CarObject : GameObject;
 public var ballObject : GameObject;
@@ -44,6 +52,28 @@ function Update () {
 			repositionScene();
 		}
 	}
+	
+	if (Input.GetKeyDown(KeyCode.Escape)) {
+    	Application.LoadLevel(0);
+    }
+	
+	if(playEnded){
+		// Quit to menu
+		if(Input.GetKey(KeyCode.Return)) {
+			Application.LoadLevel(1);
+		}
+	} else {
+		if( player1Score >= winScore || player2Score >= winScore) {
+			endPlay();
+		}
+	}
+	
+	if (Input.GetKeyDown(KeyCode.C)) {
+        sideCamera.enabled = !sideCamera.enabled;
+        topCamera.enabled = !topCamera.enabled;
+    }
+    
+   
 	
 }
 
@@ -90,4 +120,21 @@ function player2Reposition () {
 	player2CarObject.transform.position = player2CarInitPos;
 	player2CarObject.transform.rotation = player2CarInitRot;
 	player2CarObject.rigidbody.velocity = new Vector3(0,0,0);
+}
+
+function endPlay() {
+	
+	// Display victory text
+	playerWonText.enabled = true;
+	pressToRestartWonText.enabled = true;
+	if (player1Score > player2Score) {
+		playerWonText.text = "Player 1 won!";
+	} else {
+		playerWonText.text = "Player 2 won!";
+	}
+	
+	// Trigger confetti
+	
+	
+	playEnded = true;
 }
