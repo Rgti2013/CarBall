@@ -11,7 +11,12 @@ function OnTriggerEnter (other : Collider) {
 		Debug.Log("Field goal of player " + playerId + " got scored!");
 		
 		// Add to the players score
-		gamePlayLogic.addToScore(playerId, pointsForScoring);
+		if(playerId == 1) {
+			gamePlayLogic.addToScore(2, pointsForScoring);
+		} else if(playerId == 2) {
+			gamePlayLogic.addToScore(1, pointsForScoring);
+		}
+		
 		
 		// Start a timer to reset the scene after given time
 		gamePlayLogic.startTimer();
