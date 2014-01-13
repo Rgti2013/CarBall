@@ -29,6 +29,10 @@ private var ballInitRot : Quaternion;
 private var timer : float = resetTime;
 private var timerRunning : boolean = false;
 
+public var particleBlue : ParticleEmitter;
+public var particleRed : ParticleEmitter;
+public var particleGreen : ParticleEmitter;
+
 function Start () {
 	player1CarInitPos = player1CarObject.transform.position;
 	player1CarInitRot = player1CarObject.transform.rotation;
@@ -52,7 +56,9 @@ function Update () {
 			timer = resetTime;
 			
 			// Reposition the objects
-			repositionScene();
+			if(playEnded == false) {
+				repositionScene();
+			}
 		}
 	}
 	
@@ -119,6 +125,8 @@ function repositionScene() {
 	ballObject.transform.rotation = ballInitRot;
 	ballObject.rigidbody.velocity = new Vector3(0,0,0);
 	
+	
+	
 }
 
 function player1Reposition () {
@@ -145,7 +153,9 @@ function endPlay() {
 	}
 	
 	// Trigger confetti
-	
+	particleRed.emit = true;
+	particleBlue.emit = true;
+	particleRed.emit = true;
 	
 	playEnded = true;
 }
