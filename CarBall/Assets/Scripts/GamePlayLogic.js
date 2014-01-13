@@ -32,6 +32,8 @@ private var timerRunning : boolean = false;
 public var particleBlue : ParticleEmitter;
 public var particleRed : ParticleEmitter;
 public var particleGreen : ParticleEmitter;
+public var shoePickup : GameObject;
+private var position : Vector3;
 
 function Start () {
 	player1CarInitPos = player1CarObject.transform.position;
@@ -40,6 +42,9 @@ function Start () {
 	player2CarInitRot = player2CarObject.transform.rotation;
 	ballInitPos = ballObject.transform.position;
 	ballInitRot = ballObject.transform.rotation;
+
+	position = Vector3(Random.Range(-20, 20), 2, Random.Range(-25, 25));
+   	Instantiate(shoePickup, position, shoePickup.transform.rotation);
 }
 
 function Update () {
@@ -82,8 +87,12 @@ function Update () {
         topCamera.enabled = !topCamera.enabled;
     }
     
-   
-	
+   //create pickups
+   if(Time.time % 20 == 0){
+
+   		position = Vector3(Random.Range(-20, 20), 2, Random.Range(-25, 25));
+   		Instantiate(shoePickup, position, shoePickup.transform.rotation);
+   }
 }
 
 function startTimer() {

@@ -2,6 +2,7 @@
 
 var wheels : Transform[];
 var centerOfMass : Transform;
+public var playerId : int;
 
 var enginePower=150.0;
 
@@ -19,15 +20,26 @@ function Start(){
 
 function Update () {
 
-	// Power the vehicle
-    power=Input.GetAxis("Vertical") * enginePower * Time.deltaTime * 250.0;
-    
-    // Steer the vehicle
-    steer=Input.GetAxis("Horizontal") * maxSteer;
-    
-    // Apply brakes
-    brake=Input.GetKey("space") ? rigidbody.mass * 0.4: 0.0;
-
+    if(playerId == 1){
+	    // Power the vehicle
+        power=Input.GetAxis("Vertical") * enginePower * Time.deltaTime * 250.0;
+        
+        // Steer the vehicle
+        steer=Input.GetAxis("Horizontal") * maxSteer;
+        
+        // Apply brakes
+        brake=Input.GetKey("space") ? rigidbody.mass * 0.4: 0.0;
+    }
+    else if(playerId == 2){
+        // Power the vehicle
+        power=Input.GetAxis("Vertical1") * enginePower * Time.deltaTime * 250.0;
+        
+        // Steer the vehicle
+        steer=Input.GetAxis("Horizontal1") * maxSteer;
+        
+        // Apply brakes
+        brake=Input.GetKey("f") ? rigidbody.mass * 0.4: 0.0;
+    }
     
     GetCollider(0).steerAngle=steer;
     GetCollider(1).steerAngle=steer;
