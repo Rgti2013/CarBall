@@ -4,6 +4,9 @@ public var player1Score : int = 0;
 public var player2Score : int = 0;
 public var resetTime : float = 3;
 
+public var player1Power : Vector3;
+public var player2Power : Vector3;
+
 public var playerWonText : GUIText;
 public var pressToRestartWonText : GUIText;
 public var sideCamera : Camera;
@@ -93,6 +96,14 @@ function addToScore(pId : int, points : int) {
 		player1Score += points;
 	} else if(pId == 2) {
 		player2Score += points;
+	}
+}
+
+function addPower(pId : int, power : Vector3) {
+	if(pId == 1) {
+		player1Power = player1Power + power;
+	} else if(pId == 2) {
+		player2Power = player2Power + power;
 	}
 }
 
